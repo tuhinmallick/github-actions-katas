@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     # Line 6-8: The `steps` collection is an ordered list of `run` directives. 
     # Each `run` directive is executed in the order in which it is declared.
+    container: gradle:6-jdk11
     steps:
+      - name: Clone-down
+        uses: actions/checkout@v2 
       - name: my-step
         run: echo "Hello World!"
