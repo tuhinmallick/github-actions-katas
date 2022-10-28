@@ -14,8 +14,7 @@ jobs:
     # Each `run` directive is executed in the order in which it is declared.
     container: gradle:6-jdk11
     steps:
-      - uses:
-        - name: Clone-down
-          uses: actions/checkout@v2 
+      - name: Clone-down
+        uses: actions/checkout@v2 
       - name: my-step
-        run: echo "Hello World!"
+        run: ci/build-app.sh
